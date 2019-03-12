@@ -3,6 +3,7 @@ import Details from "./Details";
 import API from "../utils/API";
 import Card from "./Card";
 import Dropdown from "./Dropdown/Dropdown";
+import Wrapper from "./Wrapper";
 
 class YelpApiSearch extends Component {
   state = {
@@ -23,6 +24,7 @@ class YelpApiSearch extends Component {
     result.sort((a, b) => {
       return 0.5 - Math.random();
     });
+    this.setState({ result });
   };
 
   componentDidMount() {
@@ -34,6 +36,7 @@ class YelpApiSearch extends Component {
     API.search(location, category)
       .then(res => {
         this.setState({ result: res.data.businesses });
+
         console.log(this.state.result);
       })
 
@@ -63,13 +66,20 @@ class YelpApiSearch extends Component {
     ));
     return (
       <div>
-        <div>{restuarants}</div>
-        <button onClick={this.setClicked}>Shuffle Restuarants</button>
+        <button style={{ padding: "10px" }} onClick={this.setClicked}>
+          Shuffle
+        </button>
+        <br />
+        <br />
+        <br />
+
         <Details
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
         <Dropdown />
+
+        <Wrapper>{restuarants}</Wrapper>
       </div>
     );
   }

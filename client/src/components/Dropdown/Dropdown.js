@@ -1,6 +1,6 @@
-import React from "react";
-import Select from "react-select";
-
+import React, { Component } from "react";
+import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
+import "./styles.css";
 let categories = [
   {
     value: 0,
@@ -20,16 +20,20 @@ let categories = [
     label: "chinese"
   }
 ];
-const Dropdown = () => (
-  <div className="container">
-    <div className="row">
-      <div className="col-md-4" />
-      <div className="col-md-4">
-        <Select options={categories} />
+class Dropdown extends Component {
+  render() {
+    return (
+      <div className="container">
+        <ReactMultiSelectCheckboxes
+          placeholder="Food Categories"
+          options={categories}
+        >
+          Cuisines
+        </ReactMultiSelectCheckboxes>
+        >
       </div>
-      <div className="col-md-4" />
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 export default Dropdown;
