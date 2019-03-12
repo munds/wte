@@ -23,9 +23,6 @@ class YelpApiSearch extends Component {
     result.sort((a, b) => {
       return 0.5 - Math.random();
     });
-    this.setState({
-      result
-    });
   };
 
   componentDidMount() {
@@ -51,26 +48,23 @@ class YelpApiSearch extends Component {
   };
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchRestaurants(this.state.location, this.category);
+    this.searchRestaurants(this.state.location, this.state.category);
   };
 
   render() {
+    const restuarants = this.state.result.map((result, i) => (
+      <Card
+        key={i}
+        heading={result.name}
+        title={result.name}
+        rating={result.rating}
+        phone={result.phone}
+      />
+    ));
     return (
       <div>
-        {this.result.map(result => (
-          <Card key={result.title} id={result.id}>
-            <div>
-              <h2>{result.heading}</h2>
-            </div>
-            <div>
-              <h3>Name: {result.title}</h3>
-              <h3>Rating: {result.rating}</h3>
-              <h3>Phone: {result.phone}</h3>
-            </div>
-          </Card>
-        ))}
+        <div>{restuarants}</div>
         <button onClick={this.setClicked}>Shuffle Restuarants</button>
-
         <Details
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
