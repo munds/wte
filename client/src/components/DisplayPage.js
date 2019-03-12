@@ -2,12 +2,27 @@ import React, { Component } from "react";
 import Details from "./Details";
 import API from "../utils/API";
 import Card from "./Card";
+import Dropdown from "./Dropdown/Dropdown";
 
 class YelpApiSearch extends Component {
   state = {
-    result: {},
+    result: [],
     location: "alameda",
     category: "italian"
+  };
+  result = this.state.result;
+  displayResult = () => {};
+  setClicked = id => {
+    const result = this.state.result;
+    const shuffle = result.filter(result => result.id === id);
+
+    if (shuffle.clicked) {
+      console.log(this.clicked);
+    }
+
+    result.sort((a, b) => {
+      return 0.5 - Math.random();
+    });
   };
 
   componentDidMount() {
@@ -37,22 +52,24 @@ class YelpApiSearch extends Component {
   };
 
   render() {
+    const restuarants = this.state.result.map((result, i) => (
+      <Card
+        key={i}
+        heading={result.name}
+        title={result.name}
+        rating={result.rating}
+        phone={result.phone}
+      />
+    ));
     return (
       <div>
-        {this.state.result[0] ? (
-          <Card
-            heading={this.state.result[0].name}
-            title={this.state.result[0].name}
-            rating={this.state.result[0].rating}
-            phone={this.state.result[0].phone}
-          />
-        ) : (
-          <h3>No results to Display</h3>
-        )}
+        <div>{restuarants}</div>
+        <button onClick={this.setClicked}>Shuffle Restuarants</button>
         <Details
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
+        <Dropdown />
       </div>
     );
   }
