@@ -2,7 +2,7 @@ import React from "react";
 
 function Card(props) {
   return (
-    <div className ="card text-center">
+    <div className ="card text-center" style={{width: '100%', height: '100%'}}>
       <div className="card-header">
         <h2>{props.heading}</h2>
       </div>
