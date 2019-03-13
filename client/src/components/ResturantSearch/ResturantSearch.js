@@ -1,6 +1,6 @@
 import React from "react";
 
-function Details(props) {
+function ResturantSearch(props) {
   return (
     <form>
       <div className="form-group">
@@ -25,7 +25,7 @@ function Details(props) {
           placeholder="Category"
           id="category"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+        <button onClick={props.handleFormSubmit} className="btn btn-primary blue accent-3">
           Search Restaurant
         </button>
       </div>
@@ -33,4 +33,4 @@ function Details(props) {
   );
 }
 
-export default Details;
+export default ResturantSearch;

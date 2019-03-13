@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card(props) {
+function ResturantDetails(props) {
   return (
     <div className ="card text-center">
       <div className="card-header">
@@ -12,4 +12,4 @@ function Card(props) {
     </div>
   );
 }
-export default Card;
+export default ResturantDetails;

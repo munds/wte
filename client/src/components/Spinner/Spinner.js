@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Details from "./Details";
-import API from "../utils/API";
-import Card from "./Card";
-import Dropdown from "./Dropdown/Dropdown";
+import ResturantDetails from "../ResturantDetails";
+import API from "../../utils/API";
+import ResturantSearch from "../ResturantSearch";
+import Dropdown from "../Dropdown";
 
 class YelpApiSearch extends Component {
   state = {
@@ -53,7 +53,7 @@ class YelpApiSearch extends Component {
 
   render() {
     const restuarants = this.state.result.map((result, i) => (
-      <Card
+      <ResturantDetails
         key={i}
         heading={result.name}
         title={result.name}
@@ -65,7 +65,7 @@ class YelpApiSearch extends Component {
       <div>
         <div>{restuarants}</div>
         <button onClick={this.setClicked}>Shuffle Restuarants</button>
-        <Details
+        <ResturantSearch
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
