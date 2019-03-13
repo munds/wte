@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class Navbar extends Component {
   render() {
     return (
@@ -11,7 +12,7 @@ class Navbar extends Component {
               style={{
                 fontFamily: "monospace"
               }}
-              className="col s5 brand-logo center black-text"
+              className="col s4 center brand-logo black-text" 
             >
               Home
             </Link>
@@ -22,3 +23,6 @@ class Navbar extends Component {
   }
 }
 export default Navbar;
+//Line 8 is where you can change the color
+//Line 15 is a Materize CDN ClassName Docs are here https://materializecss.com/ 
+//Line 17 is where the centered text is located
