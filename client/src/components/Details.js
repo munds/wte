@@ -2,7 +2,7 @@ import React from "react";
 
 function Details(props) {
   return (
-    <form>
+    <form style={{backgroundColor: "white", width: "50%", margin:"0 22em",padding:"1.25em", borderRadius:"10px"}}>
       <div className="form-group">
         <label htmlFor="location">Location: </label>
         <input
@@ -25,7 +25,7 @@ function Details(props) {
           placeholder="Category"
           id="category"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+        <button style={{margin:"0 17em"}}onClick={props.handleFormSubmit} className="btn btn-primary blue accent-3">
           Search Restaurant
         </button>
       </div>

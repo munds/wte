@@ -14,7 +14,7 @@ class Navbar extends Component {
               }}
               className="col s4 center brand-logo black-text" 
             >
-              Home
+              What To Eat
             </Link>
           </div>
         </nav>
