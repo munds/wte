@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "easing": "^0.0.4",
+    "is-empty": "^1.2.0",
     "jwt-decode": "^2.2.0",
     "lodash.random": "^3.2.0",
     "react": "^16.8.4",

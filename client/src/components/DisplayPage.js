@@ -4,6 +4,7 @@ import Details from "./Details";
 import API from "../utils/API";
 // import Card from "./Card";
 import Dropdown from "./Dropdown/Dropdown";
+import "./style.css"
 
 class YelpApiSearch extends Component {
   state = {
@@ -91,13 +92,15 @@ class YelpApiSearch extends Component {
 						</div>
 					))}
 				</Slot>
-				{this.state.turn ? this.displayResult(this.state.result, this.state.target) : <p><br /><br /><br /></p>}
-        <button onClick={this.setClicked}>Shuffle Restuarants</button>
+        <br />
+        {this.state.turn ? this.displayResult(this.state.result, this.state.target) : <p id="ppp"><br /><br /><br /></p>}
+        <button style={{margin:"1.5em 42em"}} className="btn btn-primary blue accent-3" onClick={this.setClicked}>Shuffle Restuarants</button>
+        <Dropdown />
         <Details
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <Dropdown />
+        
       </div>
     );
   }

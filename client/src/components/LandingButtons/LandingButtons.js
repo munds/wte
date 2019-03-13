@@ -6,7 +6,7 @@ class LandingButtons extends Component {
       <div style={{ marginTop: "23em" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            <h5>Login or Register</h5>
+            <h5><strong>Login or Register</strong></h5>
             <br />
             <a href="/register"
               style={{
