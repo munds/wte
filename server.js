@@ -13,7 +13,7 @@ app.use(
 );
 app.use(bodyParser.json());
 // DB Config
-const db = "mongodb://localhost:27017/users";
+const db = mongoURI || "mongodb://localhost:27017/users";
 // Connect to MongoDB
 mongoose
   .connect(db, { useNewUrlParser: true })
