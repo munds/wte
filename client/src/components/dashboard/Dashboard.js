@@ -69,8 +69,12 @@ class Dashboard extends Component {
         <style jsx="true">
           {`
             .slot {
+              margin: auto;
+              margin-top: 50px;
+              text-align: center;
               font-size: 4em;
-              height: 3em;
+              height: 2em;
+              width: 70%;
             }
             .slot-item {
               height: 100%;
@@ -112,11 +116,11 @@ class Dashboard extends Component {
           </p>
         )}
         <button
-          style={{ margin: "1.5em 42em" }}
-          className="btn btn-primary blue accent-3"
+          style={{ margin: "1.5em 46.5em", padding: "0 3em" }}
+          className="btn-small btn-primary blue accent-3"
           onClick={this.setClicked}
         >
-          Shuffle Restuarants
+          Shuffle
         </button>
 
         <Details

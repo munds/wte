@@ -10,7 +10,7 @@ import Landing from "./components/LandingButtons";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Dashboard from "./components/dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import DisplayPage from "./components/DisplayPage";
 //import Table from "./components/Table/Table";
 

@@ -3,7 +3,7 @@ import Slot from "react-slot-machine";
 import Details from "./Details";
 import API from "../utils/API";
 // import Card from "./Card";
-import Dropdown from "./Dropdown/Dropdown";
+//import Dropdown from "./Dropdown/Dropdown";
 import "./style.css";
 
 class YelpApiSearch extends Component {
@@ -78,8 +78,12 @@ class YelpApiSearch extends Component {
         <style jsx="true">
           {`
             .slot {
-              font-size: 4em;
-              height: 3em;
+              margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 4em;
+    height: 2em;
+    width: 70%;
             }
             .slot-item {
               height: 100%;
@@ -121,13 +125,12 @@ class YelpApiSearch extends Component {
           </p>
         )}
         <button
-          style={{ margin: "1.5em 42em" }}
-          className="btn btn-primary blue accent-3"
+          style={{ margin: "1.5em 46.5em", padding: "0 3em" }}
+          className="btn-small btn-primary blue accent-3"
           onClick={this.setClicked}
         >
-          Shuffle Restuarants
+          Shuffle
         </button>
-        <Dropdown />
         <Details
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
