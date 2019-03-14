@@ -13,6 +13,10 @@ app.use(
   })
 );
 app.use(bodyParser.json());
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // DB Config
 key = key.mongoURI;
 const db = process.env.mongoURI || "mongodb://localhost:27017/users";
