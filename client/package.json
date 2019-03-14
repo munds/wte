@@ -23,6 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "https://arcane-woodland-64912.herokuapp.com",
   "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
