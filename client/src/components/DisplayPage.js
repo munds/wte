@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Slot from "react-slot-machine";
 import Details from "./Details";
 import API from "../utils/API";
-// import Card from "./Card";
 import Dropdown from "./Dropdown/Dropdown";
 import "./style.css";
 
@@ -33,18 +32,6 @@ class YelpApiSearch extends Component {
     });
     console.log(this.state.target, this.state.turn);
   };
-  // setClicked = id => {
-  //   const result = this.state.result;
-  //   const shuffle = result.filter(result => result.id === id);
-
-  //   if (shuffle.clicked) {
-  //     console.log(this.clicked);
-  //   }
-
-  //   result.sort((a, b) => {
-  //     return 0.5 - Math.random();
-  //   });
-  // };
 
   componentDidMount() {
     this.searchRestaurants(this.state.location, this.state.category);
@@ -127,7 +114,6 @@ class YelpApiSearch extends Component {
         >
           Shuffle Restuarants
         </button>
-        <Dropdown />
         <Details
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
