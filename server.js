@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
+let key = require("./config/keys");
 
 const app = express();
 // Bodyparser middleware
@@ -13,7 +14,8 @@ app.use(
 );
 app.use(bodyParser.json());
 // DB Config
-const db = "mongodb://localhost:27017/users";
+key = key.mongoURI;
+const db = "mongodb://localhost:27017/users" || process.env.mongoURI;
 // Connect to MongoDB
 mongoose
   .connect(db, { useNewUrlParser: true })
