@@ -83,6 +83,12 @@ class Dashboard extends Component {
             }
             p {
               font-size: 2em;
+              text-align: center;
+              font-size: 25px;
+              font-weight: 500;
+              background-color: #ffffff;
+              width: 35%;
+              margin: 0 17.35em;
             }
           `}
         </style>
