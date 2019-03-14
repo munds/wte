@@ -15,7 +15,7 @@ app.use(
 app.use(bodyParser.json());
 // DB Config
 key = key.mongoURI;
-const db = "mongodb://localhost:27017/users" || process.env.mongoURI;
+const db = process.env.mongoURI || "mongodb://localhost:27017/users";
 // Connect to MongoDB
 mongoose
   .connect(db, { useNewUrlParser: true })
