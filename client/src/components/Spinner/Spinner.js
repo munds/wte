@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import Slot from "react-slot-machine";
-import Details from "./Details";
-import API from "../utils/API";
-// import Card from "./Card";
-//import Dropdown from "./Dropdown/Dropdown";
-import "./style.css";
+import API from "../../utils/API";
+import SearchResturant from "../SearchResturant"
 
 class YelpApiSearch extends Component {
   state = {
@@ -79,11 +76,11 @@ class YelpApiSearch extends Component {
           {`
             .slot {
               margin: auto;
-    margin-top: 50px;
-    text-align: center;
-    font-size: 4em;
-    height: 2em;
-    width: 70%;
+              margin-top: 50px;
+              text-align: center;
+              font-size: 4em;
+              height: 2em;
+              width: 70%;
             }
             .slot-item {
               height: 100%;
@@ -118,7 +115,7 @@ class YelpApiSearch extends Component {
         {this.state.turn ? (
           this.displayResult(this.state.result, this.state.target)
         ) : (
-          <p id="ppp">
+          <p>
             <br />
             <br />
             <br />
@@ -131,7 +128,7 @@ class YelpApiSearch extends Component {
         >
           Shuffle
         </button>
-        <Details
+        <SearchResturant
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
         />
