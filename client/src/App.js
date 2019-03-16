@@ -5,14 +5,13 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/layout/Navbar";
 import Landing from "./components/LandingButtons";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import DisplayPage from "./components/DisplayPage";
-//import Table from "./components/Table/Table";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -43,7 +42,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/spinner" component={DisplayPage} />
-            {/* <Route exact path="/table" component={Table} /> */}
+
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
