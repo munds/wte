@@ -38,7 +38,7 @@ function SearchResturant(props) {
         <br />
         <button
           onClick={props.handleFormSubmit}
-          className="btn btn-primary blue accent-3">
+          className="search btn btn-primary blue accent-3">
           Search Restaurant
         </button>
       </div>

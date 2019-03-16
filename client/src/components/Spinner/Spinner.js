@@ -130,8 +130,8 @@ class YelpApiSearch extends Component {
         )}
         <br />
         <button
-          style={{ padding: "0 3em" }}
-          className="btn-small btn-primary blue accent-3"
+          style={{padding: "0 3em" }}
+          className="shuffle btn-small btn-primary blue accent-3"
           onClick={this.setClicked}
         >
           Shuffle

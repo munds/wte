@@ -1,0 +1,24 @@
+@media screen and (min-width:315px) and (max-width:415px) {
+    .shuffle{
+        margin: 1em 0 1em 32%;
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:615px) {
+    .shuffle{
+        margin: 1em 0 1em 35%;
+    }
+}
+
+@media screen and (min-width:615px) and (max-width:815px) {
+    .shuffle{
+        margin: 1em 0 1em 30%;
+    }
+}
+
+
+@media screen and (min-width:815px) and (max-width:1500px) {
+    .shuffle{
+        margin: 1em 0 1em 44.5%;
+    }
+}

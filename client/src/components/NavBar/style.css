@@ -1,15 +1,3 @@
-.brand-logo{
-    font-family: "monospace";
-    position: "relative";
-}
-
-.link1,
-.link2{
-    font-size:28px;
-    font-weight:300;
-    font-family: "monospace";
-    position: "relative";
-}
 
 @media screen and (min-width:215px) and (max-width:515px) {
     .brand-logo{
@@ -65,7 +53,73 @@
     }
 }
 
-@media screen and (min-width:1015px) and (max-width:1500px) {
+@media screen and (min-width:1015px) and (max-width:1115px) {
+    .brand-logo{
+        margin: 0 0 0 5%;
+    }
+    .link1{
+        position: relative;
+        margin: 0 0 0 40%;
+    }
+    .link2 {
+        position: relative;
+        margin: 0 0 0 2%;
+    }
+    .logout{
+        width:90px;
+        border-radius: "3px";
+        text-align: center;
+        position: relative;
+        margin: -1em 0 0 1%;
+        /* letter-spacing: "1.5px"; */
+    }
+}
+
+@media screen and (min-width:1115px) and (max-width:1215px) {
+    .brand-logo{
+        margin: 0 0 0 5%;
+    }
+    .link1{
+        position: relative;
+        margin: 0 0 0 40%;
+    }
+    .link2 {
+        position: relative;
+        margin: 0 0 0 2%;
+    }
+    .logout{
+        width:90px;
+        border-radius: "3px";
+        text-align: center;
+        position: relative;
+        margin: -1em 0 0 3%;
+        /* letter-spacing: "1.5px"; */
+    }
+}
+
+@media screen and (min-width:1215px) and (max-width:1315px) {
+    .brand-logo{
+        margin: 0 0 0 5%;
+    }
+    .link1{
+        position: relative;
+        margin: 0 0 0 40%;
+    }
+    .link2 {
+        position: relative;
+        margin: 0 0 0 2.5%;
+    }
+    .logout{
+        width:90px;
+        border-radius: "3px";
+        text-align: center;
+        position: relative;
+        margin: -1em 0 0 3.5%;
+        /* letter-spacing: "1.5px"; */
+    }
+}
+
+@media screen and (min-width:1315px) and (max-width:1500px) {
     .brand-logo{
         margin: 0 0 0 5%;
     }
@@ -75,20 +129,17 @@
     }
     .link2 {
         position: relative;
-        margin: 0 0 0 45%;
+        margin: 0 0 0 3%;
     }
     .logout{
         width:90px;
         border-radius: "3px";
         text-align: center;
         position: relative;
-        margin: -1em 0 0 5%;
+        margin: -1em 0 0 4%;
         /* letter-spacing: "1.5px"; */
     }
 }
-
-
-
 
 /************************
 Link styling
