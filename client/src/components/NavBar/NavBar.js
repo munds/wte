@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { logoutUser } from "../../actions/authActions";
+import "./style.css"
 
 class Navbar extends Component {
   onLogoutClick = e => {
@@ -14,48 +15,51 @@ class Navbar extends Component {
       <div className="navbar-fixed">
         <nav className="z-depth-0">
           <div className="nav-wrapper white">
-            <Link
+            <ul>
+              <li>
+              <Link
               to="/"
               style={{
                 fontFamily: "monospace",
-                margin: "0 0 0 3em"
+                position: "relative"
               }}
-              className="col s4 brand-logo black-text"
+              className="brand-logo black-text"
             >
               What To Eat
             </Link>
-            <Link
-              to="/spinner"
-              style={{
-                fontFamily: "monospace",
-                margin: "0 0 0 27em"
-              }}
-              className="col s4 brand-logo black-text"
-            >
-              SpinForFun
-            </Link>
-            <Link
+
+              </li>
+              <li>
+              <Link
               to="/aboutus"
               style={{
-                fontFamily: "monospace",
-                margin: "0 0 0 23em"
+                fontFamily: "monospace"
               }}
-              className="col s4 brand-logo black-text"
+              className="link1 black-text"
             >
               About
             </Link>
-            <button
+              </li>
+              <li>
+              <Link
+              to="/spinner"
               style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                margin: "0 0 0 84em"
+                fontFamily: "monospace"
               }}
+              className="link2 black-text"
+            >
+              SpinForFun
+            </Link>
+              </li>
+              <li>
+              <button
               onClick={this.onLogoutClick}
-              className="btn btn-small waves-effect waves-light hoverable blue accent-3"
+              className="logout btn btn-small waves-effect waves-light hoverable blue accent-3"
             >
               Logout
             </button>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -76,7 +80,3 @@ export default connect(
   mapStateToProps,
   { logoutUser }
 )(Navbar);
-
-//Line 8 is where you can change the color
-//Line 15 is a Materize CDN ClassName Docs are here https://materializecss.com/
-//Line 17 is where the centered text is located

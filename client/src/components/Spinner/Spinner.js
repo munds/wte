@@ -93,7 +93,8 @@ class YelpApiSearch extends Component {
               font-weight: 500;
               background-color: #ffffff;
               width: 35%;
-              margin: 0 17.35em;
+              position: relative;
+              margin: 0 auto;
             }
           `}
         </style>
@@ -127,8 +128,9 @@ class YelpApiSearch extends Component {
             <br />
           </p>
         )}
+        <br />
         <button
-          style={{ margin: "1.5em 46.5em", padding: "0 3em" }}
+          style={{ padding: "0 3em" }}
           className="btn-small btn-primary blue accent-3"
           onClick={this.setClicked}
         >

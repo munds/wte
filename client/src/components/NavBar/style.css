@@ -1,0 +1,107 @@
+.brand-logo{
+    font-family: "monospace";
+    position: "relative";
+}
+
+.link1,
+.link2{
+    font-size:28px;
+    font-weight:300;
+    font-family: "monospace";
+    position: "relative";
+}
+
+@media screen and (min-width:215px) and (max-width:515px) {
+    .brand-logo{
+        margin: 0 0 0 -18%;
+    }
+    .link1,
+    .link2 {
+        display:none;
+    }
+    .logout{
+        width:90px;
+        border-radius: "3px";
+        text-align: center;
+        position: relative;
+        margin: -1em 0 0 35%;
+        /* letter-spacing: "1.5px"; */
+    }
+}
+
+@media screen and (min-width:515px) and (max-width:815px) {
+    .brand-logo{
+        margin: 0 0 0 -22%;
+    }
+    .link1,
+    .link2 {
+        display:none;
+    }
+    .logout{
+        width:90px;
+        border-radius: "3px";
+        text-align: center;
+        position: relative;
+        margin: -1em 0 0 60%;
+        /* letter-spacing: "1.5px"; */
+    }
+}
+
+@media screen and (min-width:815px) and (max-width:1015px) {
+    .brand-logo{
+        margin: 0 0 0 -30%;
+    }
+    .link1,
+    .link2 {
+        display:none;
+    }
+    .logout{
+        width:90px;
+        border-radius: "3px";
+        text-align: center;
+        position: relative;
+        margin: -1em 0 0 85%;
+        /* letter-spacing: "1.5px"; */
+    }
+}
+
+@media screen and (min-width:1015px) and (max-width:1500px) {
+    .brand-logo{
+        margin: 0 0 0 5%;
+    }
+    .link1{
+        position: relative;
+        margin: 0 0 0 45%;
+    }
+    .link2 {
+        position: relative;
+        margin: 0 0 0 45%;
+    }
+    .logout{
+        width:90px;
+        border-radius: "3px";
+        text-align: center;
+        position: relative;
+        margin: -1em 0 0 5%;
+        /* letter-spacing: "1.5px"; */
+    }
+}
+
+
+
+
+/************************
+Link styling
+************************/
+.brand-logo{
+    font-family: "monospace";
+    position: "relative";
+}
+
+.link1,
+.link2{
+    font-size:28px;
+    font-weight:300;
+    font-family: "monospace";
+    position: "relative";
+}
