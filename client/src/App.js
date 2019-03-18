@@ -11,7 +11,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./components/Dashboard";
-// import AboutUs from "./components/AboutUs";
+import AboutUs from "./components/AboutUs";
 import Spinner from "./components/Spinner";
 //import Table from "./components/Table";
 
@@ -43,7 +43,7 @@ class App extends Component {
             <Route exact path="/" component={LandingButtons} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            {/* <Route exact path="/aboutus" component={AboutUs} /> */}
+            <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/spinner" component={Spinner} />
             {/* <Route exact path="/table" component={Table} /> */}
             <Switch>
